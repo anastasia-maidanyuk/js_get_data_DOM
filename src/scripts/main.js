@@ -12,7 +12,11 @@ for (const number of numbers) {
   count++;
 }
 
-const average = total / count;
+let average = 0;
+
+if (count > 0) {
+  average = total / count;
+}
 
 totalElement.innerText = total.toLocaleString();
-averageElement.innerText = average.toLocaleString();
+averageElement.innerText = count > 0 ? average.toLocaleString() : 'Н/Д';
